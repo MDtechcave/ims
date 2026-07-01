@@ -1,26 +1,62 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 33 43% 96%;        /* cream #FAF6F0 */
+  --foreground: 20 33% 15%;        /* espresso text */
+
+  --card: 0 0% 100%;
+  --card-foreground: 20 33% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 33% 15%;
+
+  --primary: 20 33% 15%;           /* espresso #3B2A20 */
+  --primary-foreground: 33 43% 96%;
+
+  --secondary: 28 30% 89%;         /* latte beige #EFE6D8 */
+  --secondary-foreground: 20 33% 15%;
+
+  --muted: 28 25% 92%;
+  --muted-foreground: 25 15% 40%;
+
+  --accent: 25 30% 40%;            /* coffee #6F4E37 */
+  --accent-foreground: 33 43% 96%;
+
+  --destructive: 4 65% 55%;        /* critical red */
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 142 40% 45%;          /* ok green */
+  --warning: 42 75% 51%;           /* low amber */
+
+  --border: 28 25% 87%;
+  --input: 28 25% 87%;
+  --ring: 25 30% 40%;
+
+  --radius: 0.75rem;
+
+  --sidebar: 20 33% 15%;
+  --sidebar-foreground: 33 30% 92%;
+  --sidebar-accent: 25 30% 25%;
+  --sidebar-accent-foreground: 33 43% 96%;
+  --sidebar-border: 20 25% 22%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-mono-data {
+    font-family: var(--font-mono);
+  }
 }
