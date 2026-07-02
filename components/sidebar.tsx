@@ -2,16 +2,17 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, Package, ArrowLeftRight, Users, Coffee } from 'lucide-react'
+import { LayoutDashboard, Package, ArrowDownToLine, ArrowUpFromLine, Users, FileBarChart, Coffee } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
   { label: 'Dashboard', href: '/', icon: LayoutDashboard },
   { label: 'Inventory', href: '/inventory', icon: Package },
-  { label: 'Stock Movement', href: '/stock-movement', icon: ArrowLeftRight },
+  { label: 'Stock In', href: '/stock/in', icon: ArrowDownToLine },
+  { label: 'Stock Out', href: '/stock/out', icon: ArrowUpFromLine },
   { label: 'Suppliers', href: '/suppliers', icon: Users },
+  { label: 'Reports', href: '/reports', icon: FileBarChart },
 ]
-
 export default function Sidebar() {
   const pathname = usePathname()
 
