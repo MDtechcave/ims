@@ -2,13 +2,12 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '../../components/ui/card'
+import { Badge } from '../../components/ui/badge'
+import { Input } from '../../components/ui/input'
+import { Button } from '../../components/ui/button'
 import { Search, Plus, ArrowUpDown } from 'lucide-react'
 
-// Mock data — will be replaced with Supabase query
 const mockProducts = [
   { id: '1', name: 'Arabica Beans - Dark Roast', category: 'Coffee Beans', barcode: '8901234567', currentStock: 2, minimumStock: 10, supplier: 'Bean Traders Co.', status: 'critical' },
   { id: '2', name: 'Oat Milk (1L)', category: 'Dairy & Alternatives', barcode: '8901234568', currentStock: 6, minimumStock: 15, supplier: 'Fresh Farms', status: 'low' },
